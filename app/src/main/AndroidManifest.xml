@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ActivityB" />
-        <activity android:name=".ActivityC">
+        <activity android:name=".ActivityC"
+            android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="mngtasks1_activity_c" />
                 <category android:name="android.intent.category.DEFAULT" />
