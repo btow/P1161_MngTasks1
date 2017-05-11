@@ -11,11 +11,9 @@ public class ActivityD extends MainActivity {
     @Override
     public void onClickBtnAbstract(int id) {
 
-        if (id != R.id.btnStart) {
+        if (id != R.id.btnStartSingleTop) {
             throw new RuntimeException();
         }
-
         startActivity(new Intent(this, ActivityD.class));
-
     }
 }

@@ -7,9 +7,6 @@ import android.view.View;
 
 import java.util.List;
 
-import static android.app.ActivityManager.*;
-import static android.app.ActivityManager.RunningTaskInfo;
-
 
 public abstract class MainActivity extends AppCompatActivity {
 
@@ -31,7 +28,7 @@ public abstract class MainActivity extends AppCompatActivity {
 
         switch (view.getId()) {
 
-            case R.id.btnInfo:
+            case R.id.btnInfoSingleTop :
                 //noinspection deprecation
                 list = activityManager.getRunningTasks(10);
 
@@ -48,7 +45,7 @@ public abstract class MainActivity extends AppCompatActivity {
                     }
                 }
                 break;
-            case R.id.btnStart :
+            case R.id.btnStartSingleTop :
                 onClickBtnAbstract(view.getId());
                 break;
             default :

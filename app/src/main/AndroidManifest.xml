@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ActivityD"
-            android:launchMode="singleTask"/>
+            android:launchMode="singleTop"/>
     </application>
 
 </manifest>
