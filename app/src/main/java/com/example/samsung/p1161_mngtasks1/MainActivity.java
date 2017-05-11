@@ -7,6 +7,7 @@ import android.view.View;
 
 import java.util.List;
 
+import static android.app.ActivityManager.*;
 import static android.app.ActivityManager.RunningTaskInfo;
 
 
@@ -28,13 +29,13 @@ public abstract class MainActivity extends AppCompatActivity {
 
     public void onClickBtn(View view) {
 
-        //noinspection deprecation
-        list = activityManager.getRunningTasks(10);
-
         switch (view.getId()) {
 
             case R.id.btnInfo:
-                for (RunningTaskInfo taskInfo : list) {
+                //noinspection deprecation
+                list = activityManager.getRunningTasks(10);
+
+                for (ActivityManager.RunningTaskInfo taskInfo : list) {
                     if (taskInfo.baseActivity.flattenToShortString().startsWith("com.example.samsung.p116")) {
                         message = "------------------------";
                         Messager.sendTpOnlyLog(message);
